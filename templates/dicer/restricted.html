@@ -1,0 +1,20 @@
+{% extends "dicer/base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}Restricted!{% endblock %}
+
+{% block body_block %}
+
+   <h1>Restricted Page!</h1>
+The restricted page has the answers that you're always seeking.
+But you have to know the question belonging to the answer you ought to be seeking.
+Otherwise, you won't find the answer you're seeking, here.
+
+Seek. Find. Answer.
+
+
+    <script src="{% static "js/dicer-jquery.js" %}"></script>
+    <script src="{% static "js/dicer-ajax.js" %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "dicer/base.html" %}
+
+{% load static %}
+
+{% block title %}About{% endblock %}
+
+{% block body_block %}
+<div class="hero-unit">
+    <h1>Welcome to Dicer</h1>
+
+
+<h2>Dice some shit up.</h2>
+
+<p class="lead">Dicer is pretty easy. Search for the name of a protein you want to make.
+</br>
+    A list of protocols, voted up by fellow researchers, will show up. Use the protocol with the most likes.
+ </br>
+    If it worked for you, like it. If it didn't, don't.
+
+</p>
+
+
+
+<br/>
+    Here's a picture of Dicer! This is a protein that's as hard as hell to make. But maybe you'll find the protocol here.<br/>
+    <img src="{% static "images/dicer.png" %}" alt="Picture of Dicer" />
+</div>
+
+    <script src="{% static "js/dicer-jquery.js" %}"></script>
+    <script src="{% static "js/dicer-ajax.js" %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+{% endblock %}

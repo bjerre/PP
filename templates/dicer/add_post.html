@@ -1,0 +1,23 @@
+{% extends 'dicer/base.html' %}
+
+{% block title %}Add Post{% endblock %}
+
+
+{% block body_block %}
+{% if category %}
+
+    <form role="form"  id="post_form" method="post" action="/dicer/category/{{category.slug}}/add_post/">
+            <h2 class="form-signin-heading">Add a Post to <a href="/dicer/category/{{category.slug}}/"> {{ category.name }}</a></h2>
+                    {% csrf_token %}
+        {{ form.as_p }}
+
+
+                <br/>
+            <button class="btn btn-primary" type="submit" name="submit">Add Post</button>
+                </form>
+            {%  else %}
+            <p>This is category does not exist.</p>
+        {%  endif %}
+
+
+        {% endblock %}
