@@ -172,8 +172,8 @@ def add_post(request, category_name_slug):
     except Category.DoesNotExist:
                 cat = None
 
-    if request.method == 'GET':
-        form = PostForm(request.GET)
+    if request.method == 'POST':
+        form = PostForm(request.POST)
         if form.is_valid():
             if cat:
                 post = form.save(commit=False)
